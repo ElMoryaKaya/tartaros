@@ -1,0 +1,39 @@
+input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: none; /* Retire la bordure */
+    float: left;
+    width: 50%; /* Augmente la largeur de la cellule de recherche */
+    background: #CCCCCC;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: #03b33e;
+    color: rgb(8, 250, 21);
+    width: 100px;
+    font-size: 16px;
+    padding: 10px;
+    border: none; /* Retire la bordure */
+}
+text {
+
+  color: #03b33e;
+
+}
+input[type=submit]:hover {
+    background: #0b7dda;
+}
+
+/* Ajoute de l'espace entre la cellule de recherche et le bouton */
+form {
+    overflow: hidden;
+}
+
+input {
+    margin: 5px; /* Ajuste l'espace entre les éléments */
+}
+.rechercher{
+    margin-top: -145px;
+    margin-left: 800px;
+}

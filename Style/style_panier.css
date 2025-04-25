@@ -1,0 +1,25 @@
+#cart-container {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+#cart-logo {
+    width: 35px;
+    height: auto;
+    margin-right: 5px;
+    
+}
+
+#cart-count {
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+

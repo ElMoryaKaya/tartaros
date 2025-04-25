@@ -1,0 +1,6 @@
+<form method="post" action="jeu_de_la_categorie.php">
+        <input type="hidden" name="category" value="Sports">
+        <div class="actions">
+          <button type="submit" class="continue-btn">Sports games</button>
+        </div>
+      </form>

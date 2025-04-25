@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+:root {
+    --violet: #00ff00;
+    --dark-green: #354f3d;
+    --light-green: #518c6c;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    background: linear-gradient(var(--dark-green), var(--light-green), var(--dark-green));
+}
+
+.presentation {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: -60px;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.ff,
+.hh {
+    flex: 1;
+    text-align: center;
+}
+
+.gg,
+.dd {
+    text-align: center;
+}
+
+.gg p,
+.dd p {
+    color: var(--black);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.ff {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ff label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--black);
+}
+
+.ff input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--dark-green);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.ff button {
+    width: 100%;
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.ff button:hover {
+    background-color: #2a3c2b;
+}
+
+.hh {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hh h1 {
+    color: var(--black);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hh p {
+    color: var(--black);
+}
+
+.image-presentation {
+    padding: 20px;
+    text-align: center;
+}
+
+.image-presentation img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gg,
+.dd {
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.gg p {
+    color: var(--violet);
+}
+
+.dd {
+    color: var(--white);
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--dark-green);
+    color: var(--white);
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    padding-top: 0px;
+    font-family: "Poppins", sans-serif;
+    justify-content: flex-start;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper svg {
+    fill: green;
+}
+
+.wrapper span:hover,
+.wrapper svg:hover,
+.wrapper .black:hover,
+.wrapper .black:hover .tooltip,
+.wrapper .black:hover .tooltip::before {
+    background: #222;
+    color: white;
+    fill: white;
+}

@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+:root {
+    --violet: #00ff00;
+    --dark-green: #354f3d;
+    --light-green: #518c6c;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: linear-gradient(#13181d, #212e20, #1f471b);
+}
+
+header {
+    background: linear-gradient(var(--dark-green), var(--light-green), var(--dark-green));
+    padding: 30px 5% 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#13181d, #212e20, #1f471b);
+}
+
+header nav {
+    padding: 30px 5% 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav h1 {
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--violet);
+    font-size: 24px;
+}
+
+header nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header nav .nav-links li {
+    margin-right: 20px;
+}
+
+header nav .nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+}
+
+header nav .right {
+    display: flex;
+    align-items: center;
+}
+
+header nav .right p {
+    margin: 0 15px 0 0;
+    color: #ccc;
+    font-size: 16px;
+}
+
+header nav .right button {
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: inherit;
+    border: 1px solid var(--violet);
+    border-radius: 5px;
+    color: var(--violet);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav .nav-links {
+        margin-top: 20px;
+    }
+
+    header nav .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav .right {
+        margin-top: 20px;
+    }
+}
+
+/* ... (styles) ... */
+
+
+/*menu deroulant */
+header nav .nav-links ul {
+    list-style: none;
+    position: absolute;
+    background: var(--dark-green);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+header nav .nav-links li:hover > ul {
+    display: block;
+}
+
+header nav .nav-links ul li {
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+
+header nav .nav-links ul a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.5s;
+}
+
+header nav .nav-links ul a:hover {
+    color: var(--violet);
+}
+
+/* ... (droit) ... */
+
+header nav .nav-links .right-align {
+    margin-left: auto;
+}
+
+/* ... () ... */
+
+.presentation {
+    padding: 30px 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ajout pour gérer le débordement sur les petits écrans */
+}
+
+.presentation .product-presentation {
+    width: 100%;
+    flex-shrink: 3;
+}
+
+.presentation .product-presentation h1 {
+    margin: 0;
+    font-size: 4vw;
+    width: 100%; /* Modification pour une largeur à 100% sur les petits écrans */
+}
+
+.presentation .product-presentation p {
+    font-weight: 300;
+    color: #e9e9e9;
+}
+
+.presentation .product-presentation button {
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.presentation .image-presentation img {
+    width: 100%;
+}
+
+.first .product-presentation button {
+    background-color: var(--violet);
+    color: var(--white);
+    border: 1px solid var(--violet);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.first .product-presentation button:hover {
+    background-color: inherit;
+    color: var(--violet);
+}
+
+.first .product-presentation .small-images {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.first .product-presentation .small-images .small {
+    padding: 20px;
+    background-color: #314d33;
+    margin: 0 15px 15px 0;
+    border-radius: 20px;
+    transition: filter 0.5s;
+}
+
+.first .product-presentation .small-images .small:hover {
+    filter: brightness(50%);
+}
+
+.first .product-presentation .small-images .small img {
+    width: 120px;
+}
+
+.second {
+    margin: 0;
+    background-color: #141d13;
+}
+
+.second .product-presentation .new {
+    color: var(--violet);
+}
+
+.second .product-presentation button {
+    background-color: inherit;
+    border: 1px solid var(--violet);
+    color: var(--violet);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.second .product-presentation button:hover {
+    background-color: var(--violet);
+    color: var(--white);
+}
+
+
+
+/* mise en forme du formulaire de connexion */
+/* mise en forme du formulaire de connexion */
+form {
+    background-color: rgba(0, 0, 0, 0.196);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajustement de la largeur */
+    max-width: 400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontale */
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ffffff;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    form {
+        max-width: none; /* Annule la largeur maximale pour permettre l'extension */
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header nav .nav-links {
+        flex-direction: column;
+    }
+
+    header nav .nav-links li {
+        margin-right: 0; /* Ajout pour aligner les éléments au centre sur les petits écrans */
+    }
+
+    header nav .nav-links a {
+        margin-bottom: 10px; /* Ajout pour espacer les éléments */
+    }
+
+    header nav .right {
+        margin-top: 20px; /* Ajout pour espacer les éléments */
+    }
+
+    .presentation .product-presentation h1 {
+        font-size: 5vw; /* Modification pour une taille de police plus grande sur les petits écrans */
+        width: 100%; /* Modification pour une largeur à 100% sur les petits écrans */
+    }
+
+
+    form {
+        width: 100%; /* Modification pour une largeur à 100% sur les petits écrans */
+        margin-right: 0; /* Pour aligner vers la gauche */
+        margin-left: 0; /* Pour aligner vers la gauche */
+    }
+}
+
+/* Styles de base */
+
+/* Style du pied de page */
+footer {
+    background: linear-gradient(#011608, #11360e);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style des colonnes du pied de page */
+.column {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+}
+
+/* Styles spécifiques pour chaque colonne (gauche, centre, droite) */
+.gauche, .center, .droit {
+    text-align: left;
+}
+
+/* Style des titres */
+h3 {
+    color: black;
+}
+
+/* Style des paragraphes */
+p {
+    margin: 5px 0;
+    color: #e7d9d9;
+}
+
+/* Media queries pour la mise en page responsive */
+
+/* Pour les écrans dont la largeur est de 768 pixels ou moins */
+@media only screen and (max-width: 768px) {
+    /* Ajustements pour les petits écrans */
+    footer {
+        padding: 10px;
+    }
+
+    /* Changement du display des colonnes en bloc et centrage du texte */
+    .column {
+        display: block;
+        margin: 0 auto 15px;
+        text-align: center;
+    }
+}
