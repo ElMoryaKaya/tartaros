@@ -34,7 +34,7 @@
             }
         } else {
            
-                // Menu principal (non connecté)
+                // Menu principal (non connectée)
                 echo '<li><a href="index.php">Accueil</a></li>';
                 echo '<li><a href="Catalogue.php">Catalogue</a>';                 
                 echo '</li>';
